@@ -1,0 +1,30 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #212121;
+}
+.header {
+    margin-bottom: 5rem;
+    background-color: red;
+}
+.iniciarDiv {
+    margin-bottom: 5rem;
+}
+.iniciarButton {
+    padding: 1rem;
+    width: 10rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    background-color: rgb(255, 222, 176);
+    transition: ease-in-out .25s;
+}
+.iniciarButton:hover {
+    cursor: pointer;
+    background-color: rgb(255, 197, 115);
+
+}
