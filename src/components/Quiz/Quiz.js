@@ -7,10 +7,11 @@ import casa from '../../assets/casa.png'
 import styles from './styles.module.css'
 
 export const Quiz = ({ setModo, pontos, setPontos }) => {
-    const [imagemAtual, setImagemAtual] = useState(casa)
-    const [palavraAtual, setPalavraAtual] = useState('CASA')
-    const [palavraEscrita, setPalavraEscrita] = useState('')
-    const [imagemCounter, setImagemCounter] = useState(1)
+    const [imagemAtual, setImagemAtual] = React.useState(casa)
+    const [palavraAtual, setPalavraAtual] = React.useState('CASA')
+    const [palavraEscrita, setPalavraEscrita] = React.useState('')
+    const [imagemCounter, setImagemCounter] = React.useState(1)
+    // let imagemAtual = casa
 
     const handlePalavra = e => {
         setPalavraEscrita((palavraEscrita + e.target.value).toUpperCase())
@@ -24,22 +25,25 @@ export const Quiz = ({ setModo, pontos, setPontos }) => {
         if (imagemCounter == 1) {
             setImagemAtual(boca)
             setPalavraAtual('BOCA')
+            // return imagemAtual = boca
         }
         if (imagemCounter == 2) {
             setImagemAtual(caneta)
             setPalavraAtual('CANETA')
+            // return imagemAtual = caneta
         }
         if (imagemCounter == 3) {
             setImagemAtual(boneca)
             setPalavraAtual('BONECA')
+            // return imagemAtual = boneca
         }
         if (imagemCounter == 4) {
             setImagemAtual(borboleta)
             setPalavraAtual('BORBOLETA')
+            // return imagemAtual = borboleta
         }
         
         setImagemCounter(imagemCounter+1)
-
         if (imagemCounter === 5) setModo('resultado')
     }
 
@@ -68,3 +72,5 @@ export const Quiz = ({ setModo, pontos, setPontos }) => {
         </div>
     )
 }
+
+// module.exports = { Quiz }
